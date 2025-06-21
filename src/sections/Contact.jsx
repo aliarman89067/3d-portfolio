@@ -12,10 +12,10 @@ const Contact = () => {
           sub="My contact Information"
         />
         <div className="flex flex-col xl:flex-row mt-16 gap-10">
-          <div className="w-5/12">
+          <div className="w-full xl:w-5/12">
             <ContactForm />
           </div>
-          <div className="w-7/12 flex items-center justify-center">
+          <div className="w-full xl:w-7/12 flex items-center justify-center">
             <div className="w-full h-full bg-[#cd7c2e] hover:cursor-grab rounded-3xl overflow-hidden flex items-center justify-center">
               <ComputerModel />
             </div>

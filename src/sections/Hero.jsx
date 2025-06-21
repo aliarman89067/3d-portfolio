@@ -89,7 +89,13 @@ const Hero = () => {
             </div>
           </figure>
         ) : (
-          <></>
+          <div className="w-[75%] px-20 -mt-20">
+            <img
+              src="/images/hero-alter.png"
+              alt="Hero Image"
+              className="w-full object-contain"
+            />
+          </div>
         )}
       </div>
       <AnimatedCounter />
