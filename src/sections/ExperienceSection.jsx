@@ -32,7 +32,6 @@ const ExperienceSection = () => {
         start: "top bottom",
         end: "60% center",
         onUpdate: (self) => {
-          console.log(self.progress);
           gsap.to(".timeline", {
             scaleY: 1 - self.progress,
           });
@@ -70,7 +69,9 @@ const ExperienceSection = () => {
                 <div className="xl:w-2/6">
                   <GlowCard card={card} index={index}>
                     <div>
-                      <img src={card.imgPath} alt={card.title} />
+                      <span className="font-semibold text-xl">
+                        {card.companyName}
+                      </span>
                     </div>
                   </GlowCard>
                 </div>
@@ -82,7 +83,11 @@ const ExperienceSection = () => {
                     </div>
                     <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
                       <div className="timeline-logo">
-                        <img src={card.logoPath} alt="Logo" />
+                        <div className="relative font-bold text-white text-3xl flex items-center justify-center">
+                          <div className="absolute w-10 h-10 rounded-full bg-purple-500/50 blur-lg"></div>
+                          <span className="z-10">{card.logoLetter}</span>
+                        </div>
+                        {/* <img src={card.logoPath} alt="Logo" /> */}
                       </div>
                       <div>
                         <h1 className="font-semibold text-3xl">{card.title}</h1>

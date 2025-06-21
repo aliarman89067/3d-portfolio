@@ -6,23 +6,7 @@ import { Room } from "./Room";
 import HeroLights from "./HeroLights";
 import Particles from "./Particles";
 
-function isWebGLAvailable() {
-  try {
-    const canvas = document.createElement("canvas");
-    return !!canvas.getContext("webgl2");
-  } catch (e) {
-    return false;
-  }
-}
-
 const HeroExperience = () => {
-  const [webgl, setWebgl] = useState(true);
-
-  useEffect(() => {
-    setWebgl(isWebGLAvailable());
-  }, []);
-  if (!webgl) return alert("⚠️ Your browser does not support WebGL.");
-
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
